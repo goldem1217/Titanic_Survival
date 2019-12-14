@@ -4,12 +4,84 @@ body {
   margin: 0;
 }
 
-.axis {
-  font: 14px sans-serif;
+.fareaxis {
+  font: 16px Arial, Helvetica, sans-serif;
 }
 
-.line {
+/* .line {
   fill: none;
   stroke: steelblue;
   stroke-width: 2px;
+} */
+
+.faretooltip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 5px;
+  background: lightskyblue;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.fareaxistext {
+  font: 20px Arial, Helvetica, sans-serif;
+}
+
+.grid {
+  fill:none;
+  stroke:gray;
+  stroke-width: .2px;
+}
+.grid path {
+  stroke-width: 0;
+}
+
+/* .custom-select {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: lightskyblue;
+  line-height: 1;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+} */
+
+#selectButton {
+  background: lightskyblue;
+  font-weight: bold;
+}
+
+.custom-select {
+  display: block;
+  text-align: center;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 700;
+  color: white;
+  padding: 10px;
+	line-height: 2;
+	width: 175px;
+	box-sizing: border-box;
+  background-color: lightskyblue;
+  border: none;
+  margin: auto;
+  width: 30%;
+  margin-top: 2%;
+  
+}
+​
+.custom-select:hover {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  box-shadow: royalblue;
+}
+​
+.custom-select select{
+  font-weight:normal;
+  text-align: center;
+  background-color: lightskyblue;
+  color: black;
 }
