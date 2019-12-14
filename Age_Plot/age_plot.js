@@ -31,7 +31,9 @@ var tip2 = d3.tip()
 
 d3.select("#ages")
 .append("div")
-.attr("class", "special")
+.classed("special", true);
+
+d3.select(".special")
 .html(
   `<div class=row>
     <div class = col-2>
@@ -50,8 +52,7 @@ d3.select("#ages")
     </div>
   </div>`);
 
-var svg = d3
-  .select("#special")
+var svg = d3.select(".special")
   .append("svg")
   .attr("height", svgHeight)
   .attr("width", svgWidth);
@@ -83,6 +84,7 @@ function chart1(csv){
           data.percent_d = +data.percent_d;        
         });
     };
+
   var barSpacing = 3;
   var scaleY = 5;
 
@@ -112,7 +114,7 @@ function chart1(csv){
   .attr("class", "axis")
   .call(yAxis);
 
-  console.log(ageData.percent_s);
+  //onsole.log(ageData.percent_s);
 
   var barsGroup = chartGroup.selectAll(".bar")
   .data(ageData)
@@ -125,7 +127,7 @@ function chart1(csv){
   .attr("x", (d, i) => i * (barWidth + barSpacing))
   .attr("y", d => chartHeight - yScale(100-d.percent_s));
 
-  console.log(ageData.age);
+  //console.log(ageData.age);
   
   chartGroup.call(tip1);
 
@@ -243,10 +245,10 @@ d3.select('#options2')
   d3.selectAll(".bar").remove();
   d3.selectAll(".axis").remove();
 
-  console.log(section)
-  console.log("as whole numbers")
+  console.log(section);
+  console.log("as whole numbers");
 
-  return chart2(section)
+  return chart2(section);
 
   });
   
