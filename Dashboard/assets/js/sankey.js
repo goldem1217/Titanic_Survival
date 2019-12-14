@@ -2,17 +2,17 @@ function drawChart() {
   var data = new google.visualization.DataTable();
   data.addColumn('string', 'From');
   data.addColumn('string', 'To');
-  data.addColumn('number', 'Weight');
+  data.addColumn('number', 'Percentage');
   data.addRows([
-    [ 'Female', 'Survivied', 29.8 ],
-    [ 'Female', 'Survivied', 20.4 ],
-    [ 'Female', 'Survivied', 22.7 ],
+    [ 'Female', 'Survived', 29.8 ],
+    [ 'Female', 'Survived', 20.4 ],
+    [ 'Female', 'Survived', 22.7 ],
     [ 'Female', 'Died', 1.0 ],
     [ 'Female', 'Died', 2.5 ],
     [ 'Female', 'Died', 23.6 ],
-    [ 'Male', 'Survivied', 7.2 ],
-    [ 'Male', 'Survivied', 2.9 ],
-    [ 'Male', 'Survivied', 8.8 ],
+    [ 'Male', 'Survived', 7.2 ],
+    [ 'Male', 'Survived', 2.9 ],
+    [ 'Male', 'Survived', 8.8 ],
     [ 'Male', 'Died', 14.3 ],
     [ 'Male', 'Died', 17.3 ],
     [ 'Male', 'Died', 49.5 ]
@@ -26,10 +26,18 @@ function drawChart() {
     height: 400,
     sankey: {
         node: {
-            colors: colors
+            colors: colors,
+            label: {fontName: 'Arial',
+                    fontSize: 20,
+                    bold: true,
+                    },
+            nodePadding: 30
+
         },
         link: { colorMode: 'gradient',
-              colors: colors
+              colors: colors,
+              color: {stroke: 'grey',
+                      strokeWidth: .2}
           }
         }
     };

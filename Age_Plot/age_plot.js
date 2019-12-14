@@ -11,8 +11,8 @@ var chartMargin = {
 var chartWidth = svgWidth - chartMargin.left - chartMargin.right;
 var chartHeight = svgHeight - chartMargin.top - chartMargin.bottom;
 
-var fp1 = 'ages.csv'
-var fp2 = 'binned_ages.csv'
+var fp1 = '../../Age_Plot/ages.csv'
+var fp2 = '../../Age_Plot/binned_ages.csv'
 
 var tip1 = d3.tip()
 .attr('class', 'd3-tip')
@@ -29,7 +29,7 @@ var tip2 = d3.tip()
 
 ///////////////////////////////////////////////////////////////////////
 
-d3.select("body")
+d3.select("#ages")
 .append("div")
 .attr("class", "special")
 .html(
