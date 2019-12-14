@@ -1,12 +1,17 @@
 html,
-body {
-  padding: 0;
-  margin: 0;
-  background: white;
+.special {
+  padding: 10px;
+  background: black;
+}
+
+.writing{
+  color: white;
+  font-family: sans-serif;
+  font-size: medium;
 }
 
 .bar{
-  fill: royalblue
+  fill: royalblue;
 }
 
 .bar:hover{
@@ -15,10 +20,61 @@ body {
 
 .d3-tip {
   line-height: 1;
-  font-weight: bold;
-  padding: 5px;
-  background: lightskyblue;
-  font-family: Arial, Helvetica, sans-serif;
-  border-radius: 2px;
+  padding: 7px;
+  background: rgba(135, 206, 250, 0.8);
+  font-family: sans-serif;
+  border-radius: 8px;
   text-align: center;
+  color: black;
 }
+
+hr {
+  border-top: 2px solid black;
+  border-bottom: none;
+}
+
+.axis line{
+  stroke: lightskyblue;
+}
+
+.axis path{
+  stroke: lightskyblue;
+}
+
+.axis text{
+  fill: lightskyblue;
+}  
+
+.options {
+  background: lightskyblue;
+}
+
+.select {
+	display: block;
+	font-size: 16px;
+	font-family: sans-serif;
+	font-weight: 700;
+  color: black;
+  padding: 10px;
+	line-height: 2;
+	width: 175px;
+	box-sizing: border-box;
+	margin: 0;
+  background-color: lightskyblue;
+  border: none;
+}
+
+.select:hover {
+  background-color: royalblue;
+  color: white;
+  border: none;
+  box-shadow: royalblue;
+}
+
+.select option {
+  font-weight:normal;
+  background-color: lightskyblue;
+  color: black;
+}
+
+
