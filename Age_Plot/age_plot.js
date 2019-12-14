@@ -29,7 +29,7 @@ var tip2 = d3.tip()
 
 ///////////////////////////////////////////////////////////////////////
 
-d3.select("body")
+d3.select("#ages")
 .append("div")
 .attr("class", "special")
 .html(
@@ -51,7 +51,7 @@ d3.select("body")
   </div>`);
 
 var svg = d3
-  .select("div")
+  .select("#special")
   .append("svg")
   .attr("height", svgHeight)
   .attr("width", svgWidth);
