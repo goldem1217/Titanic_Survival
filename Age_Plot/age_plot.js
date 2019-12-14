@@ -51,7 +51,7 @@ d3.select("#ages")
   </div>`);
 
 var svg = d3
-  .select("div")
+  .select("#special")
   .append("svg")
   .attr("height", svgHeight)
   .attr("width", svgWidth);
