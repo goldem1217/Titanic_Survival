@@ -1,0 +1,352 @@
+<!--
+=========================================================
+ Light Bootstrap Dashboard - v2.0.1
+=========================================================
+
+ Product Page: https://www.creative-tim.com/product/light-bootstrap-dashboard
+ Copyright 2019 Creative Tim (https://www.creative-tim.com)
+ Licensed under MIT (https://github.com/creativetimofficial/light-bootstrap-dashboard/blob/master/LICENSE)
+
+ Coded by Creative Tim
+
+=========================================================
+
+ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.ico">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Titanic Survivor Analysis</title>
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <!-- CSS Files -->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../assets/css/light-bootstrap-dashboard.css?v=2.0.0 " rel="stylesheet" />
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link href="../assets/css/demo.css" rel="stylesheet" />
+
+    <!-- Slideshow Resources-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: black;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 4.5s;
+      animation-name: fade;
+      animation-duration: 4.5s;
+    }
+    
+    @-webkit-keyframes fade {
+      from {opacity: .8} 
+      to {opacity: 1}
+    }
+    
+    @keyframes fade {
+      from {opacity: .8} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+    </style>
+    
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="sidebar" data-image="../assets/img/sidebar-5.jpg" data-color="blue">
+            <!--
+        Tip 1: You can change the color of the sidebar using: data-color="purple | blue | green | orange | red"
+
+        Tip 2: you can also add an image using data-image tag
+    -->
+    <div class="sidebar-wrapper">
+        <div class="logo">
+            <a class="simple-text">
+                HMS TITANIC
+            </a>
+        </div>
+        <ul class="nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="dashboard.html">
+                    <i class="nc-icon nc-chart-bar-32"></i>
+                    <p>Analysis</p>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="./slideshow.html">
+                    <i class="nc-icon nc-tv-2"></i>
+                    <p>Slideshow</p>
+                </a>
+              </li>
+            <li>
+                <a class="nav-link" href="./table.html">
+                    <i class="nc-icon nc-notes"></i>
+                    <p>Passenger List</p>
+                </a>
+            </li>
+            <li>
+                <a class="nav-link" href="#">
+                    <i class="nc-icon nc-cloud-download-93"></i>
+                    <p>API</p>
+                </a>
+            </li>
+          
+        </ul>
+    </div>
+        </div>
+        <div class="main-panel">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg " color-on-scroll="500">
+                <div class="container-fluid">
+                    <!--<a class="navbar-brand" href="#pablo"> Dashboard </a>-->
+                    <button href="" class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                        <span class="navbar-toggler-bar burger-lines"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                        <ul class="nav navbar-nav mr-auto">
+                            <!--<li class="nav-item">
+                                <a href="#" class="nav-link" data-toggle="dropdown">
+                                    <i class="nc-icon nc-palette"></i>
+                                    <span class="d-lg-none">Dashboard</span>
+                                </a>
+                            </li>-->
+                            <!--<li class="dropdown nav-item">
+                                <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                                    <i class="nc-icon nc-planet"></i>
+                                    <span class="notification">5</span>
+                                    <span class="d-lg-none">Notification</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <a class="dropdown-item" href="#">Notification 1</a>
+                                    <a class="dropdown-item" href="#">Notification 2</a>
+                                    <a class="dropdown-item" href="#">Notification 3</a>
+                                    <a class="dropdown-item" href="#">Notification 4</a>
+                                    <a class="dropdown-item" href="#">Another notification</a>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="nc-icon nc-zoom-split"></i>
+                                    <span class="d-lg-block">&nbsp;Search</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#pablo">
+                                    <span class="no-icon">Account</span>
+                                </a>
+                            </li>-->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="no-icon">Dropdown</span>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item" href="./dashboard.html">Analysis</a>
+                                    <a class="dropdown-item" href="./slideshow.html">Slideshow</a>
+                                    <a class="dropdown-item" href="./table.html">Passenger List</a>
+                                    <div class="divider"></div>
+                                    <a class="dropdown-item" href="#">API</a>
+                                </div>
+                            </li>
+                            <!--<li class="nav-item">
+                                <a class="nav-link" href="#pablo">
+                                    <span class="no-icon">Log out</span>
+                                </a>
+                            </li>-->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- End Navbar -->
+            <div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card strpied-tabled-with-hover">
+                                <div class="card-header ">
+                                    <h4 class="card-title">Project Slides</h4>
+                                    <p class="card-category">Source: https://docs.google.com/presentation/d/1jm8gZItn6AEVqb5oOu2AnfKLeH8oQG2Tb_UnBEtpfiY/edit#slide=id.p</p>
+                                </div>
+                                <br>
+                                <br>
+
+                                <div class="slideshow-container">
+
+                                    <div class="mySlides fade">
+                                        <div class="numbertext">1 / 6</div>
+                                        <img src="../assets/img/slides/Slide1.jpg" style="width:100%">
+                                        <div class="text">1</div>
+                                      </div>
+                                      
+                                      <div class="mySlides fade">
+                                        <div class="numbertext">2 / 6</div>
+                                        <img src="../assets/img/slides/Slide2.jpg" style="width:100%">
+                                        <div class="text">2</div>
+                                      </div>
+                                      
+                                      <div class="mySlides fade">
+                                        <div class="numbertext">3 / 6</div>
+                                        <img src="../assets/img/slides/Slide3.jpg" style="width:100%">
+                                        <div class="text">3</div>
+                                      </div>
+                                      
+                                      <div class="mySlides fade">
+                                          <div class="numbertext">4 / 6</div>
+                                          <img src="../assets/img/slides/Slide4.jpg" style="width:100%">
+                                          <div class="text">4</div>
+                                        </div>
+                                      
+                                        <div class="mySlides fade">
+                                          <div class="numbertext">5 / 6</div>
+                                          <img src="../assets/img/slides/Slide5.jpg" style="width:100%">
+                                          <div class="text">5</div>
+                                        </div>
+                                      
+                                        <div class="mySlides fade">
+                                          <div class="numbertext">6 / 6</div>
+                                          <img src="../assets/img/slides/Slide6.jpg" style="width:100%">
+                                          <div class="text">6</div>
+                                        </div>
+                                    
+                                    </div>
+                                    <br>
+                                    
+                                    <div style="text-align:center">
+                                        <span class="dot"></span> 
+                                        <span class="dot"></span> 
+                                        <span class="dot"></span> 
+                                        <span class="dot"></span> 
+                                        <span class="dot"></span> 
+                                        <span class="dot"></span> 
+                                      </div>
+                                
+
+                                    <script>
+                                        var slideIndex = 0;
+                                        showSlides();
+                                        
+                                        function showSlides() {
+                                          var i;
+                                          var slides = document.getElementsByClassName("mySlides");
+                                          var dots = document.getElementsByClassName("dot");
+                                          for (i = 0; i < slides.length; i++) {
+                                            slides[i].style.display = "none";  
+                                          }
+                                          slideIndex++;
+                                          if (slideIndex > slides.length) {slideIndex = 1}    
+                                          for (i = 0; i < dots.length; i++) {
+                                            dots[i].className = dots[i].className.replace(" active", "");
+                                          }
+                                          slides[slideIndex-1].style.display = "block";  
+                                          dots[slideIndex-1].className += " active";
+                                          setTimeout(showSlides, 4500); // Change image every 4.5 seconds
+                                        }
+                                    </script>
+
+                                    
+</body>
+<!--   Core JS Files   -->
+<script src="../assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="../assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!--  Chartist Plugin  -->
+<script src="../assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="../assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="../assets/js/light-bootstrap-dashboard.js?v=2.0.0 " type="text/javascript"></script>
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="../assets/js/demo.js"></script>
+
+</html>

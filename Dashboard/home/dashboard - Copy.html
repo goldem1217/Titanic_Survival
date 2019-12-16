@@ -33,20 +33,19 @@
     <link href="../assets/css/demo.css" rel="stylesheet" />
     <!-- Data for Emily's Age Plot-->
     <link rel="stylesheet" href="../../Age_Plot/style.css">
-    
     <!-- Sarah's Sankey Diagram -->
-        <script src="../assets/js/sankey.js"></script>
-        <!--Load the AJAX API-->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-        <script type="text/javascript">
+    <script src="../assets/js/sankey.js"></script>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
 
-        // Load the Visualization API and the corechart package.
-        google.charts.load('current', {'packages':['sankey']});
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['sankey']});
 
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.charts.setOnLoadCallback(drawChart);
-        </script>
-    <!-- Emily's Script Files-->
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+      </script>
+          <!-- Emily's Script Files-->
     <script src="http://d3js.org/d3.v5.min.js" charset="utf-8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
     <script type = "text/javascript" src="../../Age_Plot/age_plot.js"></script>
@@ -73,13 +72,13 @@
                 <ul class="nav">
                     <li class="nav-item active">
                         <a class="nav-link" href="dashboard.html">
-                            <i class="nc-icon nc-chart-bar-32"></i>
+                            <i class="nc-icon nc-chart-pie-35"></i>
                             <p>Analysis</p>
                         </a>
                     </li>
                     <li>
                         <a class="nav-link" href="./slideshow.html">
-                            <i class="nc-icon nc-tv-2"></i>
+                            <i class="nc-icon nc-notes"></i>
                             <p>Slideshow</p>
                         </a>
                       </li>
@@ -91,7 +90,7 @@
                     </li>
                     <li>
                         <a class="nav-link" href="#">
-                            <i class="nc-icon nc-cloud-download-93"></i>
+                            <i class="nc-icon nc-notes"></i>
                             <p>API</p>
                         </a>
                     </li>
@@ -148,11 +147,12 @@
                                     <span class="no-icon">Dropdown</span>
                                 </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a class="dropdown-item" href="./dashboard.html">Analysis</a>
-                                    <a class="dropdown-item" href="./slideshow.html">Slideshow</a>
-                                    <a class="dropdown-item" href="./table.html">Passenger List</a>
+                                    <a class="dropdown-item" href="#">Action</a>
+                                    <a class="dropdown-item" href="#">Another action</a>
+                                    <a class="dropdown-item" href="#">Something</a>
+                                    <a class="dropdown-item" href="#">Something else here</a>
                                     <div class="divider"></div>
-                                    <a class="dropdown-item" href="#">API</a>
+                                    <a class="dropdown-item" href="#">Separated link</a>
                                 </div>
                             </li>
                             <!--<li class="nav-item">
@@ -219,15 +219,15 @@
                             </div>
                         </div>
                         
-                        <div class="col-md-9">
+                        <div class="col-md-8">
                             <div class="card ">
                                 <div class="card-header ">
                                     <h4 class="card-title">Likelihood of Survival vs. Ticket Price</h4>
-                                    <p class="card-category"></p>
+                                    <p class="card-category">Place Holder</p>
                                 </div>
                                 <div class="card-body ">
                                     <!-- Rachel's Plot-->
-                                    <iframe src="../../Fare_Plot/index.html" height="800" width="1010"></iframe>
+                                    <!-- <iframe src="../../Fare_Plot/index.html" height="710" width="1010"></iframe> -->
                                     <div id="fare"></div>
                                 </div>
                                 <!-- <div class="card-footer ">
