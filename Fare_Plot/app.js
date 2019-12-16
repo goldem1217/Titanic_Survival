@@ -1,6 +1,6 @@
-var file1 = "peopleByFareClass1.csv";
-var file2 = "peopleByFareClass2.csv";
-var file3 = "peopleByFareClass3.csv";
+var file1 = "../../Fare_Plot/peopleByFareClass1.csv";
+var file2 = "../../Fare_Plot/peopleByFareClass2.csv";
+var file3 = "../../Fare_Plot/peopleByFareClass3.csv";
 
 var svgWidth = 960;
 var svgHeight = 700;
@@ -17,17 +17,17 @@ var height = svgHeight - margin.top - margin.bottom;
 
 
 // Create an SVG wrapper, append an SVG group that will hold our chart, and shift the latter by left and top margins.
-var svg = d3.select(".farechart")
+var svg = d3.select("#fare")
   .append("svg")
   .attr("width", svgWidth)
   .attr("height", svgHeight);
 
-var chartGroup = svg.append("g")
+var chartGroup2 = svg.append("g")
   .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-graphData("peopleByFareClass1.csv");
+graphData(file1);
 // Create axes labels
-chartGroup.append("text")
+chartGroup2.append("text")
     .attr("transform", "rotate(-90)")
     .attr("y", 0 - margin.left + 40)
     .attr("x", 0 - (height / 2))
@@ -35,7 +35,7 @@ chartGroup.append("text")
     .attr("class", "fareaxistext")
     .text("Fare");
 
-chartGroup.append("text")
+chartGroup2.append("text")
     .attr("transform", `translate(${width / 2}, ${height + margin.top + 30})`)
     .attr("class", "fareaxistext")
     .text("People Grouped by Fare");
@@ -98,16 +98,16 @@ function graphData(csvfile) {
 
         // Step 4: Append Axes to the chart
         // ==============================
-        chartGroup.append("g")
+        chartGroup2.append("g")
             .attr("transform", `translate(0, ${height})`)
             .attr("class","fareaxis")
             .call(bottomAxis);
 
-        chartGroup.append("g")
+        chartGroup2.append("g")
             .attr("class","fareaxis")
             .call(leftAxis);
         
-        chartGroup.append("g")         
+        chartGroup2.append("g")         
         .attr("class", "grid")
         .attr("transform", "translate(0," + height + ")")
         .call(bottomAxis
@@ -116,7 +116,7 @@ function graphData(csvfile) {
             .tickFormat("")
         )
     
-        chartGroup.append("g")         
+        chartGroup2.append("g")         
             .attr("class", "grid")
             .call(leftAxis
                 .ticks(10)
@@ -126,7 +126,7 @@ function graphData(csvfile) {
         // Step 5: Create Circles
         // ==============================
             
-        var circlesGroup = chartGroup
+        var circlesGroup = chartGroup2
         //.attr("clip-path", "url(#clip)")
         .selectAll("circle")
         .data(titanicData)
@@ -150,7 +150,7 @@ function graphData(csvfile) {
 
     // Step 7: Create tooltip in the chart
     // ==============================
-    chartGroup.call(toolTip);
+    chartGroup2.call(toolTip);
 
     // Step 8: Create event listeners to display and hide the tooltip
     // ==============================
@@ -178,7 +178,7 @@ function graphData(csvfile) {
 
 
     // transition on page load
-    chartGroup.selectAll("circle")
+    chartGroup2.selectAll("circle")
         .attr("fill", "white")
         .attr("opacity",".5")
         .transition()
@@ -200,7 +200,7 @@ function graphData(csvfile) {
 
       //add zoom behaviour to the svg element 
       //same as svg.call(zoom_handler); 
-      zoom_handler(chartGroup);
+      zoom_handler(chartGroup2);
 
 
     }).catch(function(error) {
