@@ -8,15 +8,25 @@ file_to_load = "titanic.csv"
 titanic_data = pd.read_csv(file_to_load)
 titanic_data["fare"]=round(titanic_data["fare"],2)
 
-# Class 1
-titanic_data_1class =titanic_data.loc[titanic_data["pclass"]==1]
-fare_group = pd.DataFrame(titanic_data_1class[["pclass","fare"]].groupby("fare").count())
+# Total
+titanic_data_allclass =titanic_data
+fare_group = pd.DataFrame(titanic_data_allclass[["pclass","fare"]].groupby("fare").count())
 fare_group.columns=["passengers"]
 
-fare_group_survived = pd.DataFrame(round(titanic_data_1class[["survived","fare"]].groupby(["fare"]).mean()*100,2))
+fare_group_survived = pd.DataFrame(round(titanic_data_allclass[["survived","fare"]].groupby(["fare"]).mean()*100,2))
 fare_group_survived.columns=["percentSurvived"]
 fare_group=fare_group.merge(fare_group_survived,on="fare")
-fare_group.to_csv("peopleByFareClass1.csv")
+fare_group.to_csv("peopleByFareClass.csv")
+
+# Class 1
+titanic_data_1class =titanic_data.loc[titanic_data["pclass"]==1]
+fare_group1 = pd.DataFrame(titanic_data_1class[["pclass","fare"]].groupby("fare").count())
+fare_group1.columns=["passengers"]
+
+fare_group_survived1 = pd.DataFrame(round(titanic_data_1class[["survived","fare"]].groupby(["fare"]).mean()*100,2))
+fare_group_survived1.columns=["percentSurvived"]
+fare_group1=fare_group1.merge(fare_group_survived1,on="fare")
+fare_group1.to_csv("peopleByFareClass1.csv")
 
 # Class 2
 titanic_data_2class =titanic_data.loc[titanic_data["pclass"]==2]
