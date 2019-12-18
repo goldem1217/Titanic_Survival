@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<title>Flask App</title>
+		<style type="text/css">
+			* {
+				font-family: sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Row Returner</h1>
+		<form id="myForm">
+            <label for="myName">Enter Passenger's Full name:</label>
+            <input id="myName" name="name" value="Allen, Miss Elizabeth Walton">
+            <input type="submit" value="Submit">
+          </form>
+		<p id="square"></p>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script>
+			$('#form').on('submit', function(e){
+				var number = $('#name').val();
+				e.preventDefault();
+				$.ajax({
+                    const userAction = async () => {
+                        const response = await fetch('http://127.0.0.1:5000/titanic/<name>.json', {
+                            method: 'POST',
+                            body: myBody, // string or object
+                            headers: {
+                            'Content-Type': 'application/json'
+                            }
+                        });
+                        const myJson = await response.json(); //extract JSON from the http response
+                        // do something with myJson
+                        }
+					}
+				});
+			});
+		</script>
+	</body>
+</html>
